@@ -1,0 +1,5 @@
+weight = float(input('Введите массу Вашего тела,кг'))
+height = float(input('Введите Ваш рост,м'))
+index_body = weight / (height**2)
+index_body_bmi = round(index_body, 2)
+print(f'Индекс массы тела равен {index_body}')
