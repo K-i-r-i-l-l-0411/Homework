@@ -4,6 +4,11 @@
 Даны списки семей в квартирах.
 Используя операции со множествами вычислите колько семей живёт в доме N.
 """
-newspaper = range(1, 76)
-magazine = range(77, 104)
-both = range(21, 34)
+newspaper = set(range(1, 76))
+magazine = set(range(77, 104))
+both = set(range(21, 34))
+
+all_families = newspaper.union(magazine).union(both)
+
+total_families = len(all_families)
+print("Количество семей в доме N:", total_families)
