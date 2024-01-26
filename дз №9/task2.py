@@ -5,3 +5,15 @@
 расстояние поездки в километрах и возвращающую итоговую сумму опла-
 ты такси.
 """
+
+
+def taxi(km):
+    rate = 4.00
+    fare_140m = 0.25
+    meters = km * 1000
+    blocks = meters / 140
+    summ = rate + (blocks * fare_140m)
+    return summ
+distance = float(input('Введите расстояние поездки в километрах: '))
+result = taxi(distance)
+print(f'Сумма для оплаты такси: ${result:.2f}')
