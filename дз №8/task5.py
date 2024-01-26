@@ -10,3 +10,34 @@
 - баллов больше 50 и меньше или равно 80 — «Наградить похвальной грамотой.»;
 - остальные случаи — «Выдать грамоту об участии.».
 """
+
+
+
+def calculate(subjects):
+    return sum(subjects)
+
+def determine(score):
+    if score > 80:
+        return "Наградить дипломом."
+    elif 50 < score <= 80:
+        return "Наградить похвальной грамотой."
+    else:
+        return "Выдать грамоту об участии."
+
+def f():
+    while True:
+        student_name = input("Введите имя студента (или 'стоп' для завершения): ")
+
+        if student_name.lower() == "стоп":
+            break
+        num_subjects = int(input("Введите количество предметов: "))
+        subjects_scores = []
+
+        for _ in range(num_subjects):
+            score = int(input(f"Введите баллы по предмету {_ + 1}: "))
+            subjects_scores.append(score)
+        total_score = calculate(subjects_scores)
+        print(f"Итоговый счёт: {total_score}")
+        award = determine(total_score)
+        print(award)
+f()

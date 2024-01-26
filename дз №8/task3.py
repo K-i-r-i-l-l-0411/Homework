@@ -7,3 +7,22 @@
 
 Выдачу допуска реализуй как функцию.
 """
+
+
+
+def check(score):
+    return score > 50
+
+def f():
+    students = int(input("Введите количество учеников: "))
+
+    for _ in range(students):
+        student_score = int(input("Введите балл за финальный тест: "))
+        is_admitted = check(student_score)
+
+        if is_admitted:
+            print("True")
+        else:
+            print("False")
+            print("Вы отчислены")
+f()

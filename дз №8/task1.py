@@ -7,3 +7,21 @@
 «Готово! Заберите бейджики.»
 Функция должна принимать имя и группу ученика.
 """
+
+
+
+def badge(name, group):
+    print("Колледж Сириус")
+    print(f"Имя: {name}")
+    print(f"Группа: {group}")
+    print("\n")
+
+def f():
+    num_students = int(input("Введите количество учеников: "))
+    for _ in range(num_students):
+        name = input("Введите имя ученика: ")
+        group = input("Введите группу ученика: ")
+        badge(name, group)
+    print("Готово! Заберите бейджики.")
+
+f()

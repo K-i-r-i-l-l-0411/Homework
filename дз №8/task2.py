@@ -7,3 +7,18 @@
 
 Примечание. Наличие функции является обязательным. Функция должна принимать количество набранных баллов.
 """
+
+
+
+def calculate(points):
+    if points < 0:
+        return 0
+    discount_rate = 0.10 if points < 50 else (0.15 if points < 100 else 0.20)
+    return discount_rate * 100
+
+def f():
+    points = int(input("Введите количество набранных баллов: "))
+    discount_percentage = calculate(points)
+    print(f"Ваша скидка: Скидка {discount_percentage}%")
+
+f()
